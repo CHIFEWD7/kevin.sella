@@ -95,15 +95,86 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* this will make a square photo a circle using border radius */
-#Example_F {
-height: 70px;
-width: 70px;
--moz-border-radius: 35px;
-border-radius: 35px;
+* {
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+h1.page-title {
+    text-align: center;
+
 }
 
 
+ul.topnav {
+    list-style-type: none;
+
+}
+
+ul.topnav li {
+    display: inline-block;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.sections {
+   ;
+
+}
+
+div.sections p {
+    font-family: sans-serif;
+    display: inline;
+    padding-top: 1em;
+}
+
+div.photoball {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+}
+
+img.topimage {
+    height: 200px;
+    width: 100%;
+
+}
+/* this will make a square photo a circle using border radius */
+img.first-photo {
+    height: 10rem;
+    width: 10rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
+    margin-left: 2em;
+    margin-right: 1em;
+    float: left;
+    position: fixed; 
+    left: 25%;
+    top: 25%;
+}
+
+
+ul.bottomnav {
+    list-style-type: none;
+
+}
+
+ul.bottomnav li {
+    display: inline-block;
+    padding-left: 5em;
+    padding-right: 5em;
+}
 
 
 
