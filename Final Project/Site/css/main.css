@@ -111,9 +111,16 @@ h1.page-title {
 
 }
 
+nav {
+    display: inline-block;
+    width: 100%;
+}
 
 ul.topnav {
     list-style-type: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;
 
 }
 
@@ -128,7 +135,7 @@ a {
 }
 
 div.sections {
-   ;
+   margin-left: 20%   ;
 
 }
 
@@ -136,6 +143,7 @@ div.sections p {
     font-family: sans-serif;
     display: inline;
     padding-top: 1em;
+    font-size: 20px;
 }
 
 div.photoball {
@@ -143,6 +151,7 @@ div.photoball {
     bottom: 0;
     right: 0;
     width: 300px;
+    z-index: 1;
 }
 
 img.topimage {
@@ -152,10 +161,10 @@ img.topimage {
 }
 /* this will make a square photo a circle using border radius */
 img.first-photo {
-    height: 10rem;
-    width: 10rem;
-    -moz-border-radius: 5rem;
-    border-radius: 5rem;
+    height: 13rem;
+    width: 13rem;
+    -moz-border-radius: 7rem;
+    border-radius: 7rem;
     margin-left: 2em;
     margin-right: 1em;
     float: left;
