@@ -1,0 +1,23 @@
+$primary-color: #C4666B; 
+
+* {
+    box-sizing: border-box;
+    border: 1px solid black; 
+}
+
+.clearfix:after {
+  	display: table;
+ 	clear: both;
+ 	content: "";
+}
+
+body {
+    background-color: $primary-color; 
+}
+
+img {
+	display: inline-block; 
+	width: 25em; 
+	height: 25em;
+	margin: 2em;  	
+}
