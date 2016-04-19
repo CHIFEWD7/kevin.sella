@@ -102,7 +102,7 @@ light blue: #BEE8E9;  */
 
 * {
     box-sizing: border-box;
-    border: 1px solid black; 
+    /*border: 1px solid black; */
 }
 
 .clearfix:after {
@@ -127,12 +127,13 @@ img.topimage {
 }
 
 h1 {
-    font-family: ;
+    font-family:'varela', sans-serif;
     display: inline-block;
-    margin-top: 2.25em;
+    margin-top: 2em;
     margin-left: 2.5em;
     float: left;
     position: relative;
+    font-size: 3em;
 }
 
 nav.topnav {
@@ -140,6 +141,7 @@ nav.topnav {
     float: left;
     width: 60%;
     margin-top: 3em;
+    font-family: 'Pontano Sans', sans-serif;
 
 
 }
@@ -170,6 +172,7 @@ div.section3 {
 div.section3 p {
     width: 30%;
     float: right;
+    font-family: 'Pontano Sans', sans-serif;
 }
 
 /*photo break*/
