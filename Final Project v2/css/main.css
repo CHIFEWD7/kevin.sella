@@ -102,7 +102,7 @@ light blue: #BEE8E9;  */
 
 * {
     box-sizing: border-box;
-    /*border: 1px solid black; */
+    border: 1px solid black; 
 }
 
 .clearfix:after {
@@ -118,10 +118,14 @@ body {
 a {
     text-decoration: none;
 }
+
+a:hover {
+    /*background-color: #C4666B;*/
+    color: #89D7DA;
+}
 img.topimage {
     display: inline-block; 
-    width: 25em; 
-    height: 25em;
+    width: 33%; 
     margin: 3em;  
     float: left;  
 }
@@ -129,18 +133,20 @@ img.topimage {
 h1 {
     font-family:'varela', sans-serif;
     display: inline-block;
-    margin-top: 2em;
+    margin-top: .5em;
     margin-left: 2.5em;
+    margin-bottom: 0.5em;
     float: left;
     position: relative;
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
 nav.topnav {
     display: inline-block;
-    float: left;
-    width: 60%;
+    float: right;
+    width: 55%;
     margin-top: 3em;
+    margin-right: 2em;
     font-family: 'Pontano Sans', sans-serif;
 
 
@@ -153,6 +159,10 @@ nav.topnav ul {
     float: right;
 }
 
+h2 {
+ font-family: 'varela', sans-serif;
+ margin: auto 0 ;
+}
 
 /*About Sheldon*/
 div.section1 {
@@ -160,14 +170,43 @@ div.section1 {
     display: inline-block;
 }
 
+.section1 p {
+    max-width: 30%;
+    display: inline-block;
+}
+.aboutimage {
+    max-width: 40%;
+    display: inline-block;
+    float: right;
+    margin-right: 2em;
+}
+
 /*Photos & Art*/
 div.section2 {
     width: 100%;
 }
 
+.photos {
+    width: 60%;
+}
+.pics {
+    max-width: 50%;
+}
+
 /*Tales from a Dog Walker*/
 div.section3 {
     width: 100%;
+}
+
+div .notes {
+    max-width: 60%; 
+}
+
+div.quotes {
+    width: 65%;
+    float: left;
+    margin: 0 auto;
+    position: relative;
 }
 div.section3 p {
     width: 30%;
@@ -175,9 +214,23 @@ div.section3 p {
     font-family: 'Pontano Sans', sans-serif;
 }
 
+.buttons {
+    font-family: 'Pontano Sans', sans-serif;
+    
+}
+
+.prev:hover {
+    color: #fbf2f3;
+}
+
+.next:hover {
+    color: #BEE8E9;
+}
+
 /*photo break*/
 div.section4 {
     width: 100%;
+    display: inline-block;
 }
 
 img.circlepic {
@@ -193,6 +246,7 @@ img.circlepic {
 /*Contact Sheldon*/
 div.section5 {
     width: 100%;
+    display: inline-block;
 }
 
 /*Who Made this Site?*/
@@ -203,7 +257,6 @@ div.section6 {
 clearfix {
     overflow: auto;
 }
-
 
 
 
