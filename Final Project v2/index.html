@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Sheldon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,73 +23,126 @@
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
+        <!-- <link href="css/animate.min.css" rel="stylesheet" type="text/css"> -->
+
+        <link href="css/animate.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
-        <img src="img/topimage.jpg" class="topimage">
-        
-            <nav class="topnav">
-                <ul class="nav">
-                    <li><a>About Sheldon</a></li>
-                    <li><a>Photos &#38 Art</a></li>
-                    <li><a>Tales from a Dog Walker</a></li>
-                    <li><a>Contact Sheldon</a></li>
-                    <li><a>Who Made this Site?</a></li>
-                </ul>
-            </nav>
-        <div class="header">
+
+<!-- HEADER -->
+      <div class="opening">
+        <img src="img/topimage.jpg" class="topimage"> 
         <h1>Sheldon</h1>
-        </div>            
-        <div class="section1">
+      </div>
+<!-- NAVIGATION -->        
+
+  <div id="header" class="header">
+    <nav class="topnavigation">
+         <ul class="nav navbar-nav">
+           <li>
+             <a href="#about-sheldon">About Sheldon</a>
+           </li>
+           <li>
+             <a href="#photos-art">Photos &#38 Art</a>
+           </li>
+           <li>
+             <a href="#dog-walker">Tales From a Dog Walker</a>
+           </li>
+           <li>
+             <a href="#contact">Contact</a>
+           </li>
+           <li>
+             <a href="#who">Who Made This?</a>
+           </li>
+         </ul>
+     </nav>
+  </div>
+
+<!-- ABOUT SHELDON          -->
+        <div class="section1" id="about-sheldon" class="scrollto">
             <h2>About Sheldon</h2>
-            <p>Here is some text about Sheldon and what a great dog he is. But he is also a monster. That cannot be overstated.</p>
+            <p>We adopted Sheldon in February of 2013 - when we really had no business doing so.</p>
             <img src="img/blank.jpg" class="aboutimage">
         </div>
 
-        <div class="section2">
+<!-- PHOTOS AND ART -->
+        <div class="section2" class="clearfix" id="photos-art" class="scrollto">
             <h2>Photos &#38 Art</h2>
-            <p>short description about lots of photos of Sheldon
-            </p>
-            <div class="photos">
-              <img class="pics" src="img/lines.jpg">
-              <div class="buttons">
-                 <form>
-                  <button type="button" class="previous" class="btn" disabled="true">Previous</button>
-                  <button type="button" class="nextpic" class="btn">Next</button>
-                </form>
+            <p>short description about lots of photos of Sheldon</p>
+            <div class="photocarousel" class="clearfix">
+              <img class="previous" src="img/arrow-left.png">
+                  <img class="pics" src="img/lines.jpg">
+              <img class="nextpic" src="img/arrow-right.png">
             </div>
         </div>
+   
+<!-- DOG WALKER -->
+      
+  <div class="quote-carousel" id="dog-walker" class="scrollto">
+    <h2>Tales from a Dog Walker</h2>
+      <p>Sheldon's dog walker really enjoys their time together. Every day he leaves a little note about their walk. Below are some highlights.</p>
+    <div class="quote-carousel" >
+      <div class="quote-nav">
+        <img src="img/prev.png" id="prv-testimonial" class="prevbtn">
+        <img src="img/next.png" id="nxt-testimonial" class="nextbtn">
+      </div>
+        <div class="carousel-wrap">
+          <ul class="quote-list" class="clearfix">
+            <li>
+              <p class="quote">"Sheldon's eyes were on the sky multiple times today. I wonder why."</p>
+              <p class="date-time">Wendesday, 1:20pm</p>
+            </li>
+            <li>
+              <p class="quote">"It's complicated. It's mystical. It's barbaric. It's song. It's Sheldon. Howls whenever an ambulance rolls down Foster."</p>
+              <p class="date-time">Tuesday, 2:10pm</p>
+            </li>
+            <li>
+              <p class="quote">"My walks with Sheldon and watching him reflect on the grace and beauty of anture has me doing the same more and more. Thank you Sheldon!!"</p>
+              <p class="date-time">Wednesdsay, 2:20pm</p>
+            </li>
+            <li>
+              <p class="quote">"Dank spring air had Sheldon darting alla bout ins earch of an elusive smell. Hope he found it!"</p>
+              <p class="date-time">Wednesday, 1:40pm</p>
+            </li>
+            <li>
+              <p class="quote">"Something high admist the trees had Sheldon up on two feet today."</p>
+              <p class="date-time">Tuesday, 1:20pm</p>
+            </li>
+            <li>
+              <p class="quote">"Sheldon's nose stumbled upon some complex smelling litter today. His reaction was priceless, it was like a vertical hop! Lol"</p>
+              <p class="date-time">Monday, 1:40pm</p>
+            </li>
+             <li>
+              <p class="quote">"Automatic sprinklers did little to spook Sheldon. He simply slid in for a drink. Ha ha"</p>
+              <p class="date-time">Wednesday, 1:45pm</p>
+            </li>
+          </ul><!-- @end .quote-list --><!-- @end #testimonial-list -->
+        </div><!-- @end .carousel-wrap -->
+      </div><!-- @end .quote-carousel -->
+  </div><!-- @end .quote-carousel -->
 
-        <div class="section3">
-            <h2>Tales from a Dog Walker</h2>
+<!-- PHOTO BREAK   -->    
+       <div class="photobreak">
+         <img src="img/yawn.jpg" class="circlepic">
+         <img src="img/urban.jpg" class="circlepic">
+         <img src="img/aboritum.jpg" class="circlepic">
+         <img src="img/stinkeye.jpg" class="circlepic">
+         <img src="img/earscloseup.jpg" class="circlepic">
+      </div>
 
-            <div class="quotes">
-              <img class="notes" src="img/lines.jpg">
-              <div class="buttons">
-                 <form>
-                  <button type="button" class="prev" class="btn" disabled="true">Previous</button>
-                  <button type="button" class="next" class="btn">Next</button>
-                </form>
-            </div>
-        </div>
-            <p>short description about Sheldon's dog walker and the flowery language he uses to describe his time with Sheldon</p>
-        </div>
-        
-         <div class="section4">
-           <img src="img/blank.jpg" class="circlepic">
-           <img src="img/blank.jpg" class="circlepic">
-           <img src="img/blank.jpg" class="circlepic">
-           <img src="img/blank.jpg" class="circlepic">
-           <img src="img/blank.jpg" class="circlepic">
-        </div>
 
-        <div class="section5">
-            <h2>Contact Sheldon</h2>
-             <!-- Contact Form -->
-        </div>
-        
-        <div class="section6">
-            <h2><a>Who Made this Site?</a></h2>
-        </div>
+<!-- CONTACT FORM -->
+      <div class="section5" id="contact" class="scrollto">
+          <h2>Contact Sheldon</h2>
+           <!-- Contact Form -->
+      </div>
+
+
+<!-- WHO MADE THIS SITE -->
+      <div class="section6" id="who" class="scrollto">
+          <h2><a>Who Made this Site?</a></h2>
+      </div>
 
 
         <!--[if lt IE 8]>
@@ -100,9 +153,23 @@
 
    
         <script src="js/plugins.js"></script>
+        
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
 
         <script src="js/main.js"></script>
+        
+<!-- STICKY NAVBAR SCRIPTS -->
+         <script srcx="js/jquery.stickyNavbar.js"></script>
+
+         <script src="js/jquery.easing.min.js"></script>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <script srcx="js/jquery.stickyNavbar.js"></script>
+        
+        <script src="js/jquery.stickyNavbar.min.js"></script>
      
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         

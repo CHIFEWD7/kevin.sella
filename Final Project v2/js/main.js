@@ -1,13 +1,8 @@
 $(document).ready(function(){
 
 
-// Section 2: Photo carousel below -----------------------------------------
-
-
-// GLOBAL VARIABLES -------
-
-// Store an array of image paths in a variable
-var images=['img/blank.jpg', 'img/lines.jpg', 'img/space.jpg', 'img/topimage.jpg', 'img/blank.jpg', 'img/lines.jpg'];
+// PHOTO CAROUSEL -----------------------------------------
+var images=['img/blank.jpg', 'img/lines.jpg', 'img/stache.jpg', 'img/AwShucks.jpg', 'img/DuckHunt.jpg', 'img/HappyPooch.jpg', 'img/DestroyedToy.jpg', 'img/space.jpg', 'img/warmart.jpg', 'img/goofygrin.jpg'];
 var currentPosition = 0;
 
 $('.nextpic').on('click', nextImage);
@@ -39,16 +34,10 @@ function changeImage(){
 
 
 // GLOBAL VARIABLES -------
-
-// Store an array of image paths in a variable
-var quotes=['img/blank.jpg', 'img/lines.jpg', 'img/space.jpg', 'img/topimage.jpg', 'img/blank.jpg', 'img/lines.jpg'];
-
-// Set a variable for the current position(index) and give it an ititial value of 0
 var currentPosition = 0;
 
 // EVENTS ---------
 
-// Listen for click events on the next and previous buttons
 $('.next').on('click', nextQuote);
 $('.prev').on('click', previousQuote);
 
@@ -56,47 +45,63 @@ $('.prev').on('click', previousQuote);
 // FUNCTIONS ---------
 
 function nextQuote(){
-	// Update the current position
 	currentPosition += 1;
-
-	//Make sure the previous button is enabled
 	$('.prev').prop('disabled', false);
-
-	// Update source, clear out select menu
 	changeQuote();
-
-	// If the currentPosition is at the last image
  	if (currentPosition === quotes.length - 1) {
- 		// Disable the next button
 		$('.next').prop('disabled', true);
-		// Calculate votes
 	}
 }
 
 function previousQuote(){
-	// Update the current position
 	currentPosition -= 1;
-
-	// Make sure the next button is enabled
 	$('.next').prop('disabled', false);
-
-	// Update the source and empty out the #your-vote select menu
 	changeQuote();
-
-	// If the currentPosition is at the first item (the zero index), disable the previous button
 	if (currentPosition === 0 ) {
 		$('.prev').prop('disabled', true);
 	}
 }
 
 function changeQuote(){
-	// Update the src attribute to the urls that's stored at the currentPosition in the array
 	$('.notes').attr('src', quotes[currentPosition]);
 }
 
 
+// QUOTE CAROUSEL
+
+$(function(){
+  // vars for testimonials carousel
+  var $txtcarousel = $('.quote-list');
+  var txtcount = $txtcarousel.children().length;
+  var wrapwidth = (txtcount * 415) + 415; // 400px width for each testimonial item
+  $txtcarousel.css('width',wrapwidth);
+  var animtime = 750;
+ 
+  // prev & next btns for testimonials
+  $('#prv-testimonial').on('click', function(){
+    var $last = $('.quote-list li:last');
+    $last.remove().css({ 'margin-left': '-415px' });
+    $('.quote-list li:first').before($last);
+    $last.animate({ 'margin-left': '0px' }, animtime); 
+  });
+  
+  $('#nxt-testimonial').on('click', function(){
+    var $first = $('.quote-list li:first');
+    $first.animate({ 'margin-left': '-415px' }, animtime, function() {
+      $first.remove().css({ 'margin-left': '0px' });
+      $('.quote-list li:last').after($first);
+    });  
+  });
+});
 
 });
+
+// STICKY NAVBAR
+
+$(function () {
+   $('.header').stickyNavbar();
+});
+
 
 
 
