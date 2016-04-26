@@ -256,7 +256,9 @@ div.section1 {
 .aboutimage {
     max-width: 45%;
     display: inline-block;
-    margin-right: 3%;
+    margin-left: 3%;
+    float: left;
+    margin-bottom: 10px;
 }
 
 /*PHOTOS & ART*/
