@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #272822;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -98,16 +98,22 @@ textarea {
 /*dark pink: #C4666B; 
 light pink: #fbf2f3; 
 dark blue: #89D7DA; 
-light blue: #BEE8E9;  */
+light blue: #BEE8E9; 
+dark gray: #272822 
+eggshell white: #FAFAF4 
+light gray: #444*/
+
 
 * {
     box-sizing: border-box;
-    border: 1px solid black; 
+    border: 1px solid transparent; 
 }
 
 body {
     background-color: #FAFAF4; 
 }
+
+/*TOP OF PAGE*/
 
 img.topimage {
     display: block; 
@@ -125,11 +131,14 @@ h1 {
     margin-bottom: .5em;
     font-size: 3.5em;
     text-align: center;
+    color: #444;
 }
 
-.header {
+/*NAVIGATION*/
+
+.header { /*navbar*/
     margin-bottom: 5px;
-    background-color: #D2D9D1;
+    background-color: #89D7DA;
     width: 100%;
 }
 
@@ -139,15 +148,9 @@ h1 {
     display: block; 
   }
 
- #header {
-  background-color: #89d7da;
- } 
-
 .topnavigation {
     display: inline-block;
     width: 100%;
-    margin-top: .25em;
-    margin-right: 2em;
     font-family: 'Pontano Sans', sans-serif;  
 }
 
@@ -156,6 +159,7 @@ h1 {
     text-align: center;
     position: relative;
     display: block;
+    overflow: hidden;
   }
 
   .topnavigation li {
@@ -165,18 +169,16 @@ h1 {
 
   .topnavigation ul li a {
         text-decoration: none;
-        color: #eee;
+        color: #272822;
         margin: 0;
         padding: 10px 15px 0 15px;
         text-align: justify;
-        font-family: 
-
-
+        font-family: "Pontano Sans", sans-serif; 
+        font-size: 1.5em;
     }
 
-    a:hover {
-        /*background-color: #C4666B;*/
-        color: #89D7DA;
+    .topnavigation ul li a:hover {
+        color: #fbf2f3;
     }
 
 .topnavigation:after {
@@ -186,8 +188,9 @@ h1 {
 }
 
 .active {
-    color: #BEE8E9 !important;
-    text-decoration: underline !important;
+    color: #272822;
+    background-color: #FBF2F3;
+    text-decoration: underline;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
@@ -201,8 +204,8 @@ h1 {
 
 h2 {
     font-family: 'varela', sans-serif;
-    margin: auto 0 ;
-    font-size: 2.1em;
+    margin: auto 0;
+    font-size: 2.75em;
     line-height: 1.4em;
     letter-spacing: normal;
     margin-bottom: 20px;
@@ -220,20 +223,22 @@ h2:after {
   width: 50%;
   height: 1px;
   vertical-align: middle;
-  background: #f0f0f0;
 }
 
-/*About Sheldon*/
+/*ABOUT SHELDON*/
+
 div.section1 {
     width: 100%;
     display: inline-block;
     margin-bottom: 5px;
+    background-color: #FAFAF4;
 }
 
 .section1 p {
     max-width: 40%;
     display: inline-block;
     margin-left: 3%;
+    font-size: 1.5em;
 }
 .aboutimage {
     max-width: 45%;
@@ -242,14 +247,21 @@ div.section1 {
     margin-right: 3%;
 }
 
-/*Photos & Art*/
+/*PHOTOS & ART*/
+
 div.section2 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background-color: #D2D9D1;
+    background-color: #EDCACC;
     padding-bottom: 3em;
+    overflow: hidden;
+}
+
+.section2 p {
+  font-family: "Pontano Sans", sans-serif;
+  font-size: 1.5em;
 }
 
 img.previous {
@@ -265,7 +277,7 @@ img.nextpic {
 }
 
 .photocarousel {
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
     position: relative;
     clear: auto;
@@ -274,37 +286,40 @@ img.nextpic {
 
 .pics {
     max-width: 60%;
+    margin: 0 auto;
     float: left;
 }
 
-/*Quote Carousel*/
+.photocenter {
+  max-height: 70%; 
+  margin-left: 30px;
+}
+
+/*DOG WALKER*/
 
 
 .quote-carousel {
   display: block;
   width: 100%;
-  margin-bottom: 40px;
-   background: #fff;
+  background: #fff;
   padding: 25px 20px;
   padding-bottom: 35px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   text-align: center;
+  background-color: #BEE8E9;
 }
 
-/*.quote-carousel h2 {
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 3px;
-  text-align: center;
-}*/
-
+.quote-carousel p {
+  font-size: 1.5em;
+  font-family: "Pontano Sans", sans-serif;
+}
 .quote-carousel .quote-nav {
   display: block;
   width: 300px;
   margin: 0 auto;
+
 }
 .quote-carousel .quote-nav img {
   cursor: pointer;
@@ -312,9 +327,6 @@ img.nextpic {
 .quote-carousel .quote-nav img:active {
   position: relative;
   top: 1px;
-}
-.quote-carousel .quote-nav .nextbtn {
-  float: right;
 }
 
 .quote-carousel .carousel-wrap {
@@ -328,6 +340,7 @@ img.nextpic {
   display: block;
   list-style: none;
   position: relative;
+  margin: -45px;
 }
 .quote-carousel .carousel-wrap ul li {
   display: block;
@@ -335,38 +348,37 @@ img.nextpic {
   position: relative;
   width: 400px;
   margin-right: 15px;
+  padding-top: 10px;
 }
 
-/*.quote-carousel .carousel-wrap ul li p {
-  display: block;
-  float: left;
-  position: relative;
-  width: 400px;
-  margin-right: 15px;
-  font-family: 'Pontano Sans', sans-serif;
-  text-align: center;
-}*/
 
-.quote-carousel .carousel-wrap .quote {
+p.quote {
   font-family: "Pontano Sans", sans-serif;
-  font-size: 2.0em;
+  font-size: 1.65em;
   line-height: 1.5em;
   color: #797670;
   font-style: italic;
-  margin-bottom: 6px;
   padding-bottom: 4px;
   border-bottom: 1px solid #dcdcdc;
+  padding-left: 1px;
+  padding-right: 1px;
   display: relative;
+  color: #C4666B;
 }
 
+p.date-time {
+  font-family: "Pontano Sans", sans-serif;
+  text-align: left;
+  padding-left: 3px;
+  font-size: 1em;
+  color: #272822;
+}
 
+/*PHOTO BREAK*/
 
-
-
-/*photo break*/
 div.photobreak {
     text-align: justify; 
-    background-color: #D2D9D1;
+    background-color: #FAFAF4;
     width: 100%;
 }
 
@@ -391,17 +403,42 @@ img.circlepic {
 div.section5 {
     width: 100%;
     display: inline-block;
+    background-color: #EDCACC;
+    height: 30em;
+}
+.email {
+  margin: 0 auto;
+  display: block;
+}
+
+.section5 p {
+  text-align: center;
+  font-family: "Pontano Sans", sans-serif;
+  font-size: 1.5em;
 }
 
 /*Who Made this Site?*/
 div.section6 {
     width: 100%;
+    background-color: #FAFAF4;
+    height: 35em;
+
+}
+
+.section6 h2 a {
+  hover: #BEE8E9;
 }
 
 .clearfix:after {
     display: table;
     clear: both;
     content: "";
+}
+
+footer {
+  font-family: "varela", sans-serif;
+  background-color: #89D7DA;
+  padding-left: 2em;
 }
 
 

@@ -33,10 +33,8 @@ function changeImage(){
 // Quote Carousel below -----------------------------------------
 
 
-// GLOBAL VARIABLES -------
-var currentPosition = 0;
 
-// EVENTS ---------
+var currentPosition = 0;
 
 $('.next').on('click', nextQuote);
 $('.prev').on('click', previousQuote);
@@ -70,7 +68,6 @@ function changeQuote(){
 // QUOTE CAROUSEL
 
 $(function(){
-  // vars for testimonials carousel
   var $txtcarousel = $('.quote-list');
   var txtcount = $txtcarousel.children().length;
   var wrapwidth = (txtcount * 415) + 415; // 400px width for each testimonial item
@@ -102,6 +99,40 @@ $(function () {
    $('.header').stickyNavbar();
 });
 
+// Scroll to section //
 
+// Back to top button //
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top').on('click', function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700); // speed of transition //
+	return false;
+});
+
+$('.nav navbar-nav a').on('click', function(e) {
+	e.preventDefault();
+    var href = $(this).attr('href');
+    var anchor = $(href).offset();
+    $('body').animate({ scrollTop: anchor.top }, 700);
+    return false;
+}); 
+
+// refresh to top //
+
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
 
 
