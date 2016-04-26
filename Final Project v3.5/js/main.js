@@ -93,7 +93,7 @@ $(function(){
 
 });
 
-// Scroll to section //
+// Scroll to section & Back to top button //
 
 // Back to top button //
 
