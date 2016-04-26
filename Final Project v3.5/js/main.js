@@ -93,12 +93,6 @@ $(function(){
 
 });
 
-// STICKY NAVBAR
-
-// $(function () {
-//    $('.header').stickyNavbar();
-// });
-
 // Scroll to section //
 
 // Back to top button //
